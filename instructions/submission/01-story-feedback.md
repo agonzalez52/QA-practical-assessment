@@ -19,16 +19,16 @@ For AC5 — Protected routes require authentication
 
 ## Untestable or weak acceptance criteria
 
+For AC1 — Happy path: successful sign in
+
+- It is assumed that the user will always enter their username but user may also type in their email, it is unclear whether this is allowed
+  - Suggested rewrite: "When I enter a valid username (email is not allowed) and password" (assuming username-only authentication is confirmed by Product)
+
 For AC2 - Invalid credentials, step "And I see an error message indicating the credentials are invalid"
 
 - Missing criteria on exactly what the error message should say
 - Unclear whether the error message should indicate whether the username was found to be associated with an account
   - Suggested rewrite: "And I see an error message reading "Username or password is incorrect" displayed below the password field" (assuming we do not want to inform the user if their inputted username exists in our system - pending final Product decision)
-
-For AC1 — Happy path: successful sign in
-
-- It is assumed that the user will always enter their username but user may also type in their email, it is unclear whether this is allowed
-  - Suggested rewrite: "When I enter a valid username (email is not allowed) and password" (assuming username-only authentication is confirmed by Product)
 
 For AC4 — Remember me / session persistence
 
@@ -50,6 +50,8 @@ For AC3 - Field validation
 For AC7 — Sign out
 
 - It is not specified whether a scenario in which the user selected Remember Me on Sign In would continue to persist even after the user signs out
+
+
 
 ## Questions for Product/Design/Eng
 
