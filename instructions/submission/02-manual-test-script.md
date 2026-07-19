@@ -5,7 +5,7 @@
 **Priority:** High
 **Automation Candidate:** Yes
 **Preconditions:** User is signed out and on the Sign In screen
-**Required test data:** valid username: Heath93, valid password: uBmeaz5pX
+**Required test data:** valid username: Heath93, valid password: s3cret
 **Steps**
 
 1. Enter valid username and password
@@ -41,7 +41,7 @@
 **Priority:** High
 **Automation Candidate:** Yes
 **Preconditions:** User is signed out and on the Sign In screen
-**Required test data:** invalid username: wronguser, valid password: uBmeaz5pX
+**Required test data:** invalid username: wronguser, valid password: s3cret
 **Steps**
 
 1. Enter invalid username and valid password
@@ -79,7 +79,7 @@
 **Priority:** High
 **Automation Candidate:** Yes
 **Preconditions:** User is signed out and on the Sign In screen
-**Required test data:** valid username: Heath93, valid password: uBmeaz5pX
+**Required test data:** valid username: Heath93, valid password: s3cret
 **Steps**
 
 1. Enter valid username and valid password
@@ -98,7 +98,7 @@
 **Priority:** High
 **Automation Candidate:** Yes
 **Preconditions:** User is signed out and on the Sign In screen
-**Required test data:** valid username: Heath93, valid password: uBmeaz5pX
+**Required test data:** valid username: Heath93, valid password: s3cret
 **Steps**
 
 1. Enter valid username and valid password
@@ -152,7 +152,7 @@
 **Priority:** Low
 **Automation Candidate:** Yes
 **Preconditions:** User is signed in
-**Required test data:** valid username: Heath93, valid password: uBmeaz5pX
+**Required test data:** valid username: Heath93, valid password: s3cret
 **Steps**
 
 1. Sign out
