@@ -18,7 +18,11 @@ An unauthenticated user lands on the Sign In screen and authenticates with their
 - A registered user account exists.
 - The user is signed out (no active session).
 
+
+
 ## Acceptance Criteria
+
+
 
 ### AC1 — Happy path: successful sign in
 
@@ -31,6 +35,8 @@ And I see my account and transaction feed
 And a session is established for subsequent requests
 ```
 
+
+
 ### AC2 — Invalid credentials
 
 ```gherkin
@@ -41,6 +47,8 @@ Then I remain on the Sign In screen
 And I see an error message indicating the credentials are invalid
 And no session is established
 ```
+
+
 
 ### AC3 — Field validation
 
@@ -55,6 +63,8 @@ Then I see "Password must contain at least 4 characters"
 And the "Sign In" button is disabled
 ```
 
+
+
 ### AC4 — Remember me / session persistence
 
 ```gherkin
@@ -67,6 +77,8 @@ Given I sign in without checking "Remember me"
 Then my session ends when the browser session ends
 ```
 
+
+
 ### AC5 — Protected routes require authentication
 
 ```gherkin
@@ -75,6 +87,8 @@ When I navigate directly to a protected route (e.g. /personal, /bankaccounts)
 Then I am redirected to the Sign In screen
 ```
 
+
+
 ### AC6 — Navigate to Sign Up
 
 ```gherkin
@@ -82,6 +96,8 @@ Given I am on the Sign In screen
 When I click "Don't have an account? Sign Up"
 Then I am taken to the Sign Up screen
 ```
+
+
 
 ### AC7 — Sign out
 
@@ -93,12 +109,16 @@ And I am returned to the Sign In screen
 And navigating back to a protected route redirects me to Sign In
 ```
 
-## Out of scope
+
+
+## Out of scopes
 
 - Account creation / Sign Up (RWA-119)
 - Third-party / SSO sign-in: Auth0, Okta, Cognito, Google (RWA-12x)
 - Forgot password / password reset
 - Multi-factor authentication
+
+
 
 ## Definition of Done
 
@@ -108,3 +128,56 @@ And navigating back to a protected route redirects me to Sign In
 - [ ] Security: passwords never logged or returned in API responses; session cookie is HttpOnly
 - [ ] No regression in the authenticated app shell (feeds, notifications, nav)
 - [ ] Accessibility: form fields and the Sign In button are labeled and keyboard-navigable
+
+
+
+## QA Annotations
+
+### AC1 — Happy path: successful sign in
+
+- **Risk/priority:** [QA: High risk - All application use tied to successful login, prioritize]
+- **Test type:** automated UI, API, contract
+- **Data dependencies:** unauthenticated state, valid user account must exist with known username/password
+- **Observations:** No mention of whether user able to sign in via their email, no mention of navigation behavior if the user visits the Sign In page as an authenticated user
+
+### AC2 — Invalid credentials
+
+- **Risk/priority:** [QA: High risk - Risk of accessing private user data, prioritize]
+- **Test type:** automated UI, API
+- **Data dependencies:** unauthenticated state, valid user account must exist with known username/password
+- **Observations:** Error message wording is not mentioned, error message indicating if the username is found in the system should be considered
+
+### AC3 — Field validation
+
+- **Risk/priority:** [QA: Medium risk - Mainly UX, server resources to consider if no character limits in place]
+- **Test type:** automated UI
+- **Data dependencies:** unauthenticated state
+- **Observations:**  Unclear error state if password field is left blank, no requirements around upper bound character limits for password and upper/lower bound character limits for username, consider scenario in which "Sign In" button must become disabled after being enabled
+
+### AC4 — Remember me / session persistence
+
+- **Risk/priority:** [QA: High risk - Directly tied to account access, prioritize]
+- **Test type:** manual, API
+- **Data dependencies:** authenticated state with Remember Me session, authenticated state without Remember Me session, valid user account must exist with known username/password
+- **Observations:** Unclear how long the session will persist and how this will be implemented
+
+### AC5 — Protected routes require authentication
+
+- **Risk/priority:** [QA: High risk - access to sensitive/protected data, prioritize]
+- **Test type:** automated UI, API
+- **Data dependencies:** unauthenticated state, valid user account must exist with known username/password
+- **Observations:** Navigation unclear once the user becomes authenticated
+
+### AC6 — Navigate to Sign Up
+
+- **Risk/priority:** [QA: Low risk - Not tied to sensitive data access]
+- **Test type:** automated UI
+- **Data dependencies:** unauthenticated state
+- **Observations:** None
+
+### AC7 — Sign out
+
+- **Risk/priority:** [QA: High risk - Protection of user data, prioritize]
+- **Test type:** automated UI, API
+- **Data dependencies:** authenticated state, valid user account must exist with known username/password
+- **Observations:** Unclear whether a session with Remember Me persistence will also be terminated on sign out
