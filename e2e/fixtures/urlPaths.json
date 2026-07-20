@@ -1,0 +1,7 @@
+{
+    "home": "/",
+    "signIn": "/signin",
+    "signUp": "/signup",
+    "personal": "/personal",
+    "bankAccounts": "/bankaccounts"
+}
