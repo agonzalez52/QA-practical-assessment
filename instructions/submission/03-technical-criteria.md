@@ -5,19 +5,32 @@
 ### Sign In screen
 
 **Available:**
-`data-test="signin-username"` - username field 
+`data-test="signin-username"` - username field
+
 `data-test="signin-password"` - password field
+
 `data-test="signin-remember-me"` - "Remember me" checkbox
+
 `data-test="signin-submit"` - "Sign In" button
+
 `data-test="signup"` - "Don't have an account? Sign Up" link
+
 `data-test="sidenav-home"` - Side menu > Home
+
 `data-test="sidenav-user-settings"` - Side menu > Settings
+
 `data-test="sidenav-bankaccounts"` - Side menu > Bank Accounts
+
 `data-test="sidenav-notifications"` - Side menu > Notifications
+
 `data-test="sidenav-signout"` - Side menu > Sign out
+
 `data-test="user-list-item-GjWovtg2hr"` - First contact
+
 `data-test="transaction-create-amount-input"` - New transaction amount field
+
 `data-test="transaction-create-description-input"` - New transaction note field
+
 `data-test="transaction-create-submit-payment"` - New transaction Pay button
 
 **Missing**
@@ -37,7 +50,7 @@
 `POST /transactions`
 - Verify transaction id via the API
 
-TODO: add additional information on validating /transactions response shape as well as taking a deeper look into this and other endpoints to see what else can be validated through the endpoint vs the UI
+TODO: add additional information on validating /transactions response shape as well as taking a deeper look into this and other endpoints to see what else can be validated through the endpoint vs the UI and documented
 
 ## Test data strategy
 

@@ -7,4 +7,4 @@ AI was used as follows:
     - token vs cookie approach, and how each are generally implemented
 - Quick guide on initial Playwright scaffolding (chatbot)
 - Finding a workaround for data-test landing on an outer div for input elements causing them to not be directly accessible (Github Copilot)
-- Assistence for properly retrieving transaction id from /transactions endpoint (Github Copilot)
+- Assistance for properly retrieving transaction id from /transactions endpoint (Github Copilot)

@@ -17,7 +17,9 @@ User remains on the Sign In screen with the 'Username is required' error surfaci
 
 ## Evidence
 Link to screenshot: https://github.com/agonzalez52/QA-practical-assessment/blob/main/e2e/screenshots/auth-TC-118-09-navigate-to-signup.png
+
 Path to screenshot: e2e/screenshots/auth-TC-118-09-navigate-to-signup.png
+
 Failing test name: TC-118-09: Verify navigation to the Sign Up screen from Sign In
 
 ## Impact / notes
