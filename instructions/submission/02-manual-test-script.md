@@ -31,7 +31,7 @@
 **Expected Result:**
 
 1. User remains on the Sign In screen
-2. User sees an error message indicating the credentials are invalid
+2. User sees error message: "Username or password is invalid"
 3. No user session is established
 
 
@@ -50,7 +50,7 @@
 **Expected Result:**
 
 1. User remains on the Sign In screen
-2. User sees an error message indicating the credentials are invalid
+2. User sees error message: "Username or password is invalid"
 3. No user session is established
 
 
