@@ -49,8 +49,8 @@ test.describe("End to end user journey tests", () => {
     });
     await page.goto(urlPaths.personal);
 
-    await expect(personalPage.transactionItem(transactionId)).toBeVisible();
     await page.screenshot({ path: "e2e/screenshots/e2e-send-payment-07-verify-transaction.png" });
+    await expect(personalPage.transactionItem(transactionId)).toBeVisible();
   });
 
   // TODO: send-money validation (zero/negative/empty amount, no contact selected),
