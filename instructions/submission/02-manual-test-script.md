@@ -227,6 +227,7 @@
 **Expected Result:** "Sign In" button becomes enabled
 
 3. Empty the username field
+
 **Expected Result:**
 
 4. "Username is required" error surfaces
